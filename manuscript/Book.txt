@@ -1,2 +1,7 @@
 Introduction.md
 Object Pooling.md
+Waiting Strategies.md
+Lock-Free Concurrency.md
+Finding Problems: Profiling.md
+Processor Optimizations.md
+Approximate Data Structures.md
