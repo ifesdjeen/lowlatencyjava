@@ -2,12 +2,13 @@
 
 This chapter introduces a concept of Object Pooling. We'll go through
 the motivation, general principles, dos and don'ts, best practices and
-general usage.
+ways to apply them in real world apps.
 
-First, we're going to go through the concepts of __borrowing__ as opposed
-to __reference couting__, in order to understand how the user interacts
-with a pool. Then we'll adress the case when the pool is at a __critically
-low level__ of objects, and has to be refilled.
+First, we're going to go through the concepts of __borrowing__(also known
+as __dispose pattern__) as opposed to __reference couting__, in order to
+understand how the user interacts with a pool. Then we'll adress the case
+when the pool is at a __critically low level__ of objects, and has to be
+refilled.
 
 Next, we'll identify possible ways for growing the pool by stages, and
 discuss advantages and drawbacks of each of the strategies.
@@ -17,7 +18,45 @@ developer has to be careful: common errors, possible alternatives.
 
 ## What is Pooling
 
+Object Pool is a design pattern, that works with a set of pre-initalized
+entities, instead of disposing and then re-creating them on demand. Whenever
+the client of the pool is done working with an object, it just returns it
+to the pool for recycling.
+
+You may think about pooling like about the manual memory management:
+allocation and freeing of objects is explicit.
+
 ## When to use Pooling
+
+In garbage-collected langauges, such as Java, pooling is used to reduce
+the garbage collection pressure by handling a part of it's work in an
+explicit manner.
+
+If the objects contained in the pool have large initialization cost, or
+have to be created in large quantities at a time, pool can be used to pay
+this cost upfront during the application startup, and avoiding these
+expensive operations during the working mode.
+
+Essentially, pool is will work very well in two cases:
+
+  * objects with high allocation rate
+  * constantly allocated objects
+
+TODO: HOW MANY IS HIGH
+
+
+
+## Benefits
+
+Pool
+
+
+## Re-initialization
+
+One of the hardest questions to answer, when thinking about responsibilities
+of an allocated object and the pool itself, is which one of them
+shuold be handling resetting the object back to the "empty" state.
+
 
 
 
@@ -272,7 +311,7 @@ wrong:
     objects, but if conditions do not allow you do do that, you may
     run into problem of modification object while it's content is being
     read.
-  *
+  * __ hanging references__: TODO: FINISH ME
 
 ## If there are so many pitfalls, why should I even bother?
 
