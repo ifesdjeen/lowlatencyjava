@@ -1,3 +1,5 @@
+# Introduction 
+
 Most problem are quite straightforward to solve: when something is slow,
 you can either optimize it or parallelize it. When you hit a throughput
 barrier, you partition things to more workers. Although when you face
@@ -38,3 +40,6 @@ These resources are pooled because of the high initialization cost
 (establishing connection, performing a handshake over the network, 
 memory-mapping the file or whatever else). 
 
+## Chapters Overview
+
+Chapters will be separated 
