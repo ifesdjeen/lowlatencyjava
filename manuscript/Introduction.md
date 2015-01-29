@@ -1,4 +1,3 @@
-
 Most problem are quite straightforward to solve: when something is slow,
 you can either optimize it or parallelize it. When you hit a throughput
 barrier, you partition things to more workers. Although when you face
