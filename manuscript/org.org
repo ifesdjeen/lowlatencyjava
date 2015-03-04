@@ -1,0 +1,31 @@
+#-*- mode: org -*-
+#+STARTUP: showall
+#+TAGS: { @Core(c)  @Problem(p)}
+
+* Object Pooling
+  http://gameprogrammingpatterns.com/object-pool.html
+
+** TODO What is Pooling
+** TODO When to use Pooling
+** TODO Benefits
+** TODO Recyling Strategies
+*** TODO Borrowing
+*** TODO Reference-counting
+*** TODO Using lambda blocks
+*** TODO Choosing the right one
+** TODO Growth Strategies
+*** TODO Fixed Size
+*** TODO Tiny-Step growth
+*** TODO Block Growth
+*** TODO Shrinking
+*** TODO Choosing the right one
+** TODO Allocation Triggers
+*** TODO Empty Pool Trigger
+*** TODO Watermarks
+*** TODO Lease/Return Rate
+** TODO Lease Tracking
+*** BitMask / Atomic Iteger
+*** HashMap
+
+** TODO Re-initialization
+** TODO Pitfalls

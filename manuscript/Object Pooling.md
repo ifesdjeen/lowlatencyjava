@@ -4,6 +4,7 @@ This chapter introduces a concept of Object Pooling. We'll go through
 the motivation, general principles, dos and don'ts, best practices and
 ways to apply them in real world apps.
 
+
 First, we're going to go through the concepts of __borrowing__(also known
 as __dispose pattern__) as opposed to __reference couting__, in order to
 understand how the user interacts with a pool. Then we'll adress the case
@@ -43,8 +44,6 @@ Essentially, pool is will work very well in two cases:
   * constantly allocated objects
 
 TODO: HOW MANY IS HIGH
-
-
 
 ## Benefits
 
