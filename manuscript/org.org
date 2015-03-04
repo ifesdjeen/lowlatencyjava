@@ -3,8 +3,6 @@
 #+TAGS: { @Core(c)  @Problem(p)}
 
 * Object Pooling
-  http://gameprogrammingpatterns.com/object-pool.html
-
 ** TODO What is Pooling
 ** TODO When to use Pooling
 ** TODO Benefits
