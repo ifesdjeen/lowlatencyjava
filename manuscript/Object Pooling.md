@@ -47,7 +47,39 @@ TODO: HOW MANY IS HIGH
 
 ## Benefits
 
-Pool
+The best way to grasp the benefits of object pooling is to compare
+the graphs of heap memory usage. 
+
+![Without Pooling](images/object_pool/without_pool.png)
+
+If you take a look on the following graph, you'll see the garbage 
+collection cycles every 5-6 seconds, and heap size is jumping 
+between 200 and 600 megabytes.
+
+![With Pooling](images/object_pool/with_pool.png)
+
+On the other hand, if you take a look at this graph, you'll just see
+almost a flat line (going slightly up), but, since the Garbage 
+Collection threshold isn't triggered, we still can see heap size
+growing.
+
+In fact, both code snippets are doing the same exact thing: creating and
+retaining 2M objects, each one of which has just two long fields and 
+nothing else. 
+
+Each one of these objects is taking 32 Bytes: 8 Bytes for each of the
+Long fields and 16 bytes of "overhead". 32 Bytes is not that much, but 
+the longer objects stay in memory, the more of them you're going to 
+be getting. But this is just a part of the price one has to pay. There's
+also allocation cost, garbage collection cost, plus memory fragmentation 
+and bookkeeping inbetween.
+
+Of course this is an exaggerated example, since in real life there
+will be lots of objects that are still going to be garbage collected.
+But since our goal is not to implement manual memory management on 
+top of JVM, but reduce GC pressure and optimise for latency, we have
+to hunt for the objects that have certain behavior patterns in order
+to get the biggest win.
 
 
 ## Re-initialization
