@@ -11,7 +11,8 @@
 *** TODO Reference-counting
 *** TODO Using lambda blocks
 *** TODO Choosing the right one
-** TODO Growth Strategies
+** TODO Empty Pool Handling
+   It is also possible to block and wait until someone else returns
 *** TODO Fixed Size
 *** TODO Tiny-Step growth
 *** TODO Block Growth
