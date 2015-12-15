@@ -2,7 +2,23 @@
 #+STARTUP: showall
 #+TAGS: { @Core(c)  @Problem(p)}
 
+* Introduction
+
+* Java Memory Model
+** Allocations
+** Stack
+
 * Object Pooling
+  http://gameprogrammingpatterns.com/object-pool.html
+
+  Object pools can be implemented in an automated fashion in languages
+  like C++ via smart pointers. In the constructor of the smart pointer -
+  an object can be requested from the pool and in the destructor of the
+  smart pointer - the object can be released back to the pool.
+
+  http://my.safaribooksonline.com/book/programming/java/9780137150021/creating-and-destroying-objects/ch02lev1sec5
+  http://www.oracle.com/ru/corporate/events/quarter-four/virtual-machine-java-404173-ru.pdf
+
 ** TODO What is Pooling
 ** TODO When to use Pooling
 ** TODO Benefits
@@ -28,3 +44,23 @@
 
 ** TODO Re-initialization
 ** TODO Pitfalls
+
+* Waiting Strategies
+
+* Networking
+** Buffering
+** Zero-copy
+
+* Lock-free concurrency
+
+* Profiling
+
+* Approximate Data Structures
+
+* JVM Flags
+** Optimizing for number of threads
+** Threads or ring buffer?
+
+* Processing
+** Batch
+** Stream
