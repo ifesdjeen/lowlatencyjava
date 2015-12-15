@@ -26,23 +26,23 @@ a precise value__. So you can ask it "how many times have I seen Alex?" but you 
 
 The algorithm itself is quite straightforward:
 
-  * You create a table, filled with zeroes, of a `width` {$$}w{$$} and `height` {$$}d{$$}
-  * $d$ is calculated from {$$}d = ⌈ln 1/δ ⌉{$$}
-  * $w$ is calculated from {$$}w = ⌈e/ε⌉{$$}
-  * You take {$$}d{$$} linear hash functions
+  * You create a table, filled with zeroes, of a `width` {$$}w{/$$} and `height` {$$}d{/$$}
+  * $d$ is calculated from {$$}d = ⌈ln 1/δ ⌉{/$$}
+  * $w$ is calculated from {$$}w = ⌈e/ε⌉{/$$}
+  * You take {$$}d{/$$} linear hash functions
 
 ### Update
 
-  * You for rows with indexes from 0 to {$$}d-1{$$} (zero-based index), you calculate a hash of given value
-  * Having a current update row denoted as {$$}i{$$}, and {$$}i{$$} hash-function denoted as {$$}h{$$}, and current value
-    in your table denoted as {$$}old{$$}
-  * You update a table at position {$$}[i, h(value)]{$$} to {$$}old + 1{$$}
+  * You for rows with indexes from {$$}0{/$$} to {$$}d-1{/$$} (zero-based index), you calculate a hash of given value
+  * Having a current update row denoted as {$$}i{/$$}, and {$$}i{/$$} hash-function denoted as {$$}h{/$$}, and current value
+    in your table denoted as {$$}old{/$$}
+  * You update a table at position {$$}[i, h(value)]{/$$} to {$$}old + 1{/$$}
 
 ## Lookup
 
-  * You for rows with indexes from 0 to {$$}d-1{$$} (zero-based index), you calculate a hash of given value
-  * Having a current update row denoted as {$$}i{$$}, and {$$}i{$$} hash-function denoted as {$$}h{$$}
-  * You find a maximum of values at positions {$$}[i, h(value)]{$$}
+  * You for rows with indexes from 0 to {$$}d-1{/$$} (zero-based index), you calculate a hash of given value
+  * Having a current update row denoted as {$$}i{/$$}, and {$$}i{/$$} hash-function denoted as {$$}h{/$$}
+  * You find a maximum of values at positions {$$}[i, h(value)]{/$$}
   * Profit!
 
 
@@ -50,8 +50,4 @@ The algorithm itself is quite straightforward:
 
 ## Skip List
 
-# Bonus
-
-## Streaming Histograms
-
-##
+## Streaming Histogram
