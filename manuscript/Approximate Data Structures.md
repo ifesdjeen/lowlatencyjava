@@ -27,8 +27,8 @@ a precise value__. So you can ask it "how many times have I seen Alex?" but you 
 The algorithm itself is quite straightforward:
 
   * You create a table, filled with zeroes, of a `width` {$$}w{/$$} and `height` {$$}d{/$$}
-  * {$$}d{/$$} is calculated from {$$}d = [\ceil[\big]{ln 1/δ}]{/$$}
-  * {$$}w{/$$} is calculated from {$$}w = ⌈e/ε⌉{/$$}
+  * {$$}d{/$$} is calculated from {$$}d = \lceil {ln {\frac{1}{\sigma}}} \rceil{/$$}
+  * {$$}w{/$$} is calculated from {$$}w = \lceil {\frac{e}{\varepsilon}} \rceil{/$$}
   * You take {$$}d{/$$} linear hash functions
 
 ### Update
