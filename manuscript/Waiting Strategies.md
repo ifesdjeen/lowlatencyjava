@@ -1,5 +1,0 @@
-# Waiting Strategies
-
-## Busy Spin
-
-##
